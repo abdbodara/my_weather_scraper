@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .column {
+        flex: 1 1 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Row">
+      <div class="Column">
+        <table>
+          <th>DAY</th>
+          {% for i in data.day %}
+          <tr>
+            <td>{{ i }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="Column">
+        <table>
+          <th>DESC</th>
+          {% for i in data.desc %}
+          <tr>
+            <td>{{ i }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      &nbsp;&nbsp;&nbsp;
+      <div class="Column">
+        <table>
+          <th>TEMP</th>
+
+          {% for i in data.temp %}
+          <tr>
+            <td>{{ i }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
